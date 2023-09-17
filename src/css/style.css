@@ -160,6 +160,10 @@ body {
     display: none;
 } 
 
+.close-text:hover {
+  cursor: pointer;
+}
+
 .dragItem--active {
     opacity: 0.2;
 }
