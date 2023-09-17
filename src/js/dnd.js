@@ -22,36 +22,35 @@ export default function dragDrop(item) {
   });
 
   let draggedItem = null;
-  let droppedItem = null;
 
-  function handlerStartDrag(event) {
+  function handlerStartDrag() {
     this.classList.add("dragItem--active");
     draggedItem = this;
     return;
   }
 
-  function handlerEndDrag(event) {
+  function handlerEndDrag() {
     this.classList.remove("dragItem--active");
     draggedItem = null;
     return;
   }
 
-  function hendlerZoneEnter(event) {
+  function hendlerZoneEnter() {
     event.preventDefault();
     this.classList.add("dropZone--active");
     return;
   }
 
-  function hendlerZoneLeave(event) {
+  function hendlerZoneLeave() {
     this.classList.remove("dropZone--active");
   }
 
-  function hendlerZoneOver(event) {
+  function hendlerZoneOver() {
     event.preventDefault();
     return;
   }
 
-  function hendlerZoneDrop(event) {
+  function hendlerZoneDrop() {
     this.classList.remove("dropZone--active");
     this.appendChild(draggedItem);
     return;
