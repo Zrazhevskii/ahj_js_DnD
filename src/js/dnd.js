@@ -1,6 +1,8 @@
-export default function dragDrop(item) {
+export default function dragDrop() {
   const dragZone = document.querySelectorAll(".box-task");
   const dragItem = document.querySelectorAll(".text");
+  let draggedItem = null;
+  let droppedItem = null;
 
   dragItem.forEach((item) => {
     item.addEventListener("dragstart", handlerStartDrag);
@@ -21,39 +23,32 @@ export default function dragDrop(item) {
     zone.addEventListener("drop", hendlerZoneDrop);
   });
 
-  let draggedItem = null;
-
   function handlerStartDrag() {
     this.classList.add("dragItem--active");
     draggedItem = this;
-    return;
   }
 
   function handlerEndDrag() {
     this.classList.remove("dragItem--active");
     draggedItem = null;
-    return;
   }
 
-  function hendlerZoneEnter() {
+  function hendlerZoneEnter(event) {
     event.preventDefault();
     this.classList.add("dropZone--active");
-    return;
   }
 
   function hendlerZoneLeave() {
     this.classList.remove("dropZone--active");
   }
 
-  function hendlerZoneOver() {
+  function hendlerZoneOver(event) {
     event.preventDefault();
-    return;
   }
 
   function hendlerZoneDrop() {
     this.classList.remove("dropZone--active");
     this.appendChild(draggedItem);
-    return;
   }
 }
 dragDrop();

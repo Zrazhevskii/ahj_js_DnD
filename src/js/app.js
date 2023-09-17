@@ -20,10 +20,7 @@ import dragDrop from "./dnd";
                 <div class="close" id="clos">&#10006;</div>
             </div>`;
 
-      item.parentNode.insertBefore(
-        task,
-        item.parentNode.children[item.parentNode.children.length - 2],
-      );
+      item.parentNode.insertBefore(task, item.parentNode.children[item.parentNode.children.length - 2]);
       workArea(task, item);
     });
   });
