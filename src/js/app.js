@@ -65,7 +65,6 @@ function workArea(evt, item) {
             i.parentNode.remove();
         });
     });
-    // dragDrop();
 }
 
 function closeTask() {
