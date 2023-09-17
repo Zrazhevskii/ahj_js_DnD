@@ -16,7 +16,7 @@ import dragDrop from "./dnd";
       task.classList.add("content");
       task.innerHTML = `
             <div class="task">
-                <textarea placeholder="Сюда можно записать задачу." name="area" id="1" class="input"></textarea>
+                <textarea placeholder="Здесь можно вписать что-то важное." name="area" id="1" class="input"></textarea>
                 <div class="close" id="clos">&#10006;</div>
             </div>`;
 
