@@ -1,19 +1,12 @@
 export default function dragDrop() {
   const dragZone = document.querySelectorAll(".box-task");
   const dragItem = document.querySelectorAll(".text");
+
   let draggedItem = null;
-  let droppedItem = null;
 
   dragItem.forEach((item) => {
     item.addEventListener("dragstart", handlerStartDrag);
     item.addEventListener("dragend", handlerEndDrag);
-
-    item.addEventListener("dragenter", () => {
-      droppedItem = item;
-    });
-    item.addEventListener("dragenter", () => {
-      droppedItem = null;
-    });
   });
 
   dragZone.forEach((zone) => {
