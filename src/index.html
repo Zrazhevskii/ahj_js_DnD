@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее задание по DnD</title>
 </head>
 <body>
-  
+    <div class="container">
+        <div class="box one">
+            <div class="box-header">
+                <div class="box-title">
+                    <h2 class="title">TODO</h2>
+                </div>
+                <div class="img">
+                    <img src="./img/dots.svg" alt="иконка" class="image">
+                </div>
+            </div>
+            <div class="box-task">
+                <div class="text" draggable="true">
+                    <div class="text-item">Карточка с какой-то задачей</div>
+                    <div class="close-text">&#10006;</div>
+                </div>
+                <div class="text" draggable="true">
+                    <div class="text-item">Карточка с другой задачей</div>
+                    <div class="close-text">&#10006;</div>
+                </div>
+            </div>
+            <button class="btn">+ Add another card</button>
+            <!-- <button class="btn-item">+ Add another card</button> -->
+        </div>
+        <div class="box two">
+            <div class="box-header">
+                <div class="box-title">
+                    <h2 class="title">IN PROGRESS</h2>
+                </div>
+                <div class="img">
+                    <img src="./img/dots.svg" alt="иконка" class="image">
+                </div>
+            </div>
+            <div class="box-task"></div>
+            <button class="btn">+ Add another card</button>
+        </div>
+        <div class="box tree">
+            <div class="box-header">
+                <div class="box-title">
+                    <h2 class="title">DONE</h2>
+                </div>
+                <div class="img">
+                    <img src="./img/dots.svg" alt="иконка" class="image">
+                </div>
+            </div>
+            <div class="box-task">
+                <div class="text" draggable="true">
+                    <div class="text-item">Просто карточка</div>
+                    <div class="close-text">&#10006;</div>
+                </div>
+            </div>
+            <button class="btn">+ Add another card</button>
+        </div>
+    </div>
 </body>
 </html>

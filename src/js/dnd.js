@@ -1,4 +1,4 @@
-import dragDrop from './dnd';
+import dragDrop from './dnd2.js';
 
 (() => {
     const btn = Array.from(document.querySelectorAll('.btn'));
