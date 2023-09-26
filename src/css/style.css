@@ -1,10 +1,12 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
-  } 
+}
 
 body {
     background-color: rgb(121, 121, 237);
-    font-family: "Tahoma", sans-serif;
+    font-family: 'Tahoma', sans-serif;
 }
 
 .container {
@@ -72,7 +74,6 @@ body {
     color: #6e6d6e;
 }
 
-
 .task {
     background-color: white;
     width: 370px;
@@ -82,11 +83,10 @@ body {
     position: relative;
 }
 
-
 .input {
     width: 380px;
     min-height: 50px;
-    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
     resize: none;
     border-radius: 10px;
 }
@@ -94,7 +94,6 @@ body {
 .input:focus {
     outline: none;
 }
-
 
 .btn-item {
     background-color: rgb(111, 180, 9);
@@ -133,7 +132,7 @@ body {
     border-radius: 10px;
     margin: 10px auto;
     padding: 10px;
-    box-shadow: 0 15px 10px 0 rgba(0,0,0,0.2); 
+    box-shadow: 0 15px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .text:hover {
@@ -144,7 +143,7 @@ body {
     cursor: grabbing;
 }
 
-.text:hover .close-text{
+.text:hover .close-text {
     background-color: #fff9f9;
     color: #656262;
     font-size: 16px;
@@ -154,19 +153,23 @@ body {
     width: 16px;
     height: 16px;
     position: absolute;
-    
 }
 
 .close-text {
     display: none;
-} 
+}
 
 .close-text:hover {
+    display: block;
     cursor: pointer;
 }
 
-.text.plaseholder {
+.plaseholder {
     opacity: 0.6;
     cursor: grabbing;
     background-color: rgb(98, 89, 89);
+}
+
+.close {
+    opacity: 0;
 }

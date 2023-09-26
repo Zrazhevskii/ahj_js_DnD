@@ -3,7 +3,6 @@ import insertTask from "./insertTask";
 export default function dragDrop() {
   const dragZone = document.querySelectorAll(".box-task");
   const dragItem = document.querySelectorAll(".text");
-  let draggedItem = null;
 
   dragItem.forEach((item) => {
     item.addEventListener("dragstart", handlerStartDrag);
@@ -24,26 +23,20 @@ export default function dragDrop() {
         zone.insertBefore(curCard, bottomCard);
       }
     });
-
-    zone.addEventListener("drop", hendlerZoneDrop);
   });
 
-  function handlerStartDrag(evt) {
+  function handlerStartDrag() {
     this.classList.add("plaseholder");
-    draggedItem = this;
+    this.querySelector(".close-text").classList.add("close");
   }
 
-  function handlerEndDrag(evt) {
+  function handlerEndDrag() {
     this.classList.remove("plaseholder");
-    draggedItem = null;
+    this.querySelector(".close-text").classList.remove("close");
   }
 
   function hendlerZoneEnter(evt) {
     evt.preventDefault();
-  }
-
-  function hendlerZoneDrop(evt) {
-    this.classList.remove("plaseholder");
   }
 }
 dragDrop();
