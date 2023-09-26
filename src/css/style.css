@@ -4,6 +4,7 @@
 
 body {
     background-color: rgb(121, 121, 237);
+    font-family: "Tahoma", sans-serif;
 }
 
 .container {
@@ -161,15 +162,11 @@ body {
 } 
 
 .close-text:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.dragItem--active {
-    opacity: 0.2;
-}
-
-.dropZone--active {
-    background-color: #6e6d6e;
-    border-radius: 10px;
-    margin: 10px;
+.text.plaseholder {
+    opacity: 0.6;
+    cursor: grabbing;
+    background-color: rgb(98, 89, 89);
 }
